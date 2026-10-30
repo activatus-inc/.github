@@ -1,0 +1,36 @@
+name: Bug
+description: Something we built is not working the way it should. Tell us what you saw so someone can fix it.
+title: "Bug: "
+labels: ["bug"]
+projects: ["activatus-inc/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bug is a ticket too: it gets an owner and moves across the board like any other piece of work. You don't need to know why it broke, only what you saw.
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: What you saw, in plain words. Copy any error message exactly.
+      placeholder: "Example: the Monday post did not arrive in the channel."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen
+      description: What you expected to see instead.
+      placeholder: "Example: the post arrives every Monday morning."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to see it
+      description: The steps someone else can follow to see the problem for themselves. A screenshot or a link helps.
+      placeholder: |
+        1. Open the channel on Monday morning.
+        2. Look for the post from Ferdi.
+    validations:
+      required: true
