@@ -1,0 +1,41 @@
+name: Idea
+description: Write down a new idea so it isn't lost. We sort every idea at the weekly steer (keep it, plan it for later, or park it with a reason).
+title: "Idea: "
+labels: ["idea"]
+projects: ["activatus-inc/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An idea is anything we might build or change. It does not need to be finished or sure. One or two sentences is enough.
+  - type: textarea
+    id: what
+    attributes:
+      label: What's the idea
+      description: Say it in plain words, as you would to a colleague. One or two sentences.
+      placeholder: "Example: the morning brief could list the tickets each of us is working on today."
+    validations:
+      required: true
+  - type: input
+    id: raised_by
+    attributes:
+      label: Who raised it
+      description: The person who had the idea (it may not be you).
+      placeholder: "Example: Mustafa"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: What gets better if we do this, and for whom. A guess is fine.
+      placeholder: "Example: nobody has to ask what everyone is doing."
+    validations:
+      required: false
+  - type: input
+    id: where
+    attributes:
+      label: Where it came up
+      description: Optional. A link to the Slack message or meeting where it was said, so we can find the context later.
+    validations:
+      required: false
