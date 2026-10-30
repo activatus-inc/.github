@@ -24,6 +24,19 @@ body:
     validations:
       required: true
   - type: textarea
+    id: brief
+    attributes:
+      label: Agent brief
+      description: Written so someone new to software, or an AI builder, can start from this alone. Fill in each line in plain words.
+      value: |
+        What happens today:
+        What should happen:
+        The checks that prove it:
+        Out of scope:
+        Files or systems not to touch:
+    validations:
+      required: false
+  - type: textarea
     id: checks
     attributes:
       label: How we'll know it's done
@@ -33,6 +46,13 @@ body:
         - [ ]
     validations:
       required: true
+  - type: textarea
+    id: checkpoints
+    attributes:
+      label: Checkpoints
+      description: Optional. A person who signs off before the work moves on, one per line, from the approval guide ("How builds get approved" in #build-board). Most tickets have none. Example "- [ ] Muneeb: review before it merges".
+    validations:
+      required: false
   - type: input
     id: spec
     attributes:
