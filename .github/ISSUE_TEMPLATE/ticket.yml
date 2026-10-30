@@ -1,0 +1,42 @@
+name: Ticket
+description: A piece of work we have agreed to do. It has one owner and a short list of checks that say when it is finished.
+title: ""
+labels: ["ticket"]
+projects: ["activatus-inc/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A ticket is one piece of work with one owner. It moves across the board step by step: Backlog (agreed, not started), Spec (writing the plan), Review (someone else checks the plan), Build (being made), Verify (checking it really works), Done. Testing is part of every ticket, through the checks below.
+  - type: textarea
+    id: what
+    attributes:
+      label: What are we building
+      description: Describe the result in plain words, from the point of view of the person who will use it.
+      placeholder: "Example: a Slack post every Monday that lists what each of us is building this week."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: The reason this is worth doing now. Who asked for it, and what it unblocks.
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: How we'll know it's done
+      description: A checklist of plain checks anyone could try. Start each line with "- [ ] ". Tick a box when that check passes. The ticket is done when every box is ticked.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: input
+    id: spec
+    attributes:
+      label: Link to the spec
+      description: Optional. A spec is the longer written plan for bigger work. Paste its link or file path if there is one.
+    validations:
+      required: false
